@@ -1,0 +1,56 @@
+.footerMainContainer {
+    margin: 0 auto;
+    padding: 20px 15px;
+
+    @screen lg {
+        max-width: 1170px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+.footerBlock {
+    flex: 1;
+    margin-bottom: 50px;
+
+    .blockTitle {
+        font-weight: '800';
+        font-size: 22px;
+        margin-bottom: 10px;
+        @apply text-white;
+        @screen lg {
+            margin-bottom: 10px;
+        }
+    }
+
+    .blockContent {
+        @apply flex;
+        flex-direction: column;
+    }
+
+    @screen lg {
+        margin: 0;
+        padding: 0 30px;
+    }
+}
+
+.navFooterItem {
+    > .navFooterLinkItem::before {
+      content: "•";
+      margin-right: 12px;
+    }
+  
+    color: #bbb;
+    align-self: flex-start;
+    margin-top: 20px;
+  
+    @screen lg {
+      margin-top: 10px;
+    }
+  }
+  
+  .navFooterContactItem {
+    &::before {
+      content: none;
+    }
+  }

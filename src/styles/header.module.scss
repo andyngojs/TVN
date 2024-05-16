@@ -1,0 +1,121 @@
+.headerData {
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #bbb;
+
+    +.divider {
+        border-left-width: 1px;
+        border-color: #bbb;
+        @apply hidden;
+
+        @screen lg {
+            @apply block;
+        }
+    }
+}
+
+.headerContent {
+    @apply flex;
+    @apply flex-col;
+    margin: 0 auto;
+
+    @screen lg {
+        @apply flex-row;
+    }
+}
+
+.navItemLinkItem {
+    font-size: 24px;
+    line-height: 33px;
+
+    padding: 20px 15px;
+    box-shadow: inset 0px -1px 0px #ececec;
+
+    @screen lg {
+        font-size: 18px;
+        line-height: 22px;
+        padding: 0;
+        box-shadow: none;
+    }
+}
+
+.navItemContainer {
+    @apply hidden;
+    @apply text-center;
+
+    @screen lg {
+        @apply flex;
+        @apply flex-row;
+        @apply justify-end;
+
+        height: auto !important;
+        padding: 20px 15px;
+        margin-left: auto;
+
+        a {
+            margin-left: 45px;
+        }
+    }
+}
+
+.showNavMobile {
+    @apply flex;
+    @apply flex-col;
+    @apply bg-white;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+/** icon nav mobile toggle btn */
+.navMobileToggleContainer {
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.iconListContainer {
+    @apply flex;
+    @apply flex-col;
+    @apply justify-around;
+    @apply items-end;
+    width: 18px;
+    height: 18px;
+
+    @screen lg {
+        @apply hidden;
+    }
+}
+
+.iconListPath {
+    background-color: #828282;
+    border-radius: 3px;
+    width: 18px;
+    height: 3px;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform-origin: 2% 60%;
+
+    &:nth-child(2) {
+        width: 13px;
+    }
+}
+
+.animatingIconListPath {
+    &:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+
+    &:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+}
