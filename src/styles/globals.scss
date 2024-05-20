@@ -12,6 +12,7 @@ html,
 body {
     line-height: 24px;
     font-size: 15px;
+    scroll-behavior: smooth;
     @apply bg-slate-200;
 }
 
