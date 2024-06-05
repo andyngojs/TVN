@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import clsx from 'clsx';
 import config from '../../app.config.json';
-import styles from '@/styles/header.module.scss';
+import styles from '@/styles/components/header.module.scss';
 
 const HEADER_DATA = [
   {
@@ -40,10 +40,6 @@ const NAV_DATA = [
   },
   {
     title: 'Liên hệ',
-    link: '#',
-  },
-  {
-    title: 'Tin tức',
     link: '#',
   },
 ];

@@ -1,8 +1,7 @@
-import Link from 'next/link';
 import clsx from 'clsx';
 import Header from './Header';
 import config from '../../app.config.json';
-import styles from '@/styles/layout.module.scss';
+import styles from '@/styles/components/layout.module.scss';
 import {HEADER_HEIGHT} from './Header';
 
 const CONTACT_FOOTER_DATA = [
@@ -57,7 +56,7 @@ export default function Layout({children}) {
       className={clsx('flex flex-col justify-between relative min-h-[100vh]')}>
       <Header />
 
-      <main className={clsx('max-w-app-width')} style={{marginTop: HEADER_HEIGHT}}>{children}</main>
+      <main style={{marginTop: HEADER_HEIGHT}}>{children}</main>
 
       <footer className="w-full bg-neutral-900">
         <div

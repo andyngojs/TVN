@@ -32,3 +32,47 @@ button:active {
 .max-w-app-width {
     max-width: 1170px;
 }
+
+.btn {
+  @apply bg-red-600;
+  @apply px-btn-x;
+  @apply py-btn-y;
+  @apply text-white;
+  line-height: 20px;
+  border-radius: 10px;
+
+  &:hover {
+    @apply bg-red-800;
+  }
+
+  > p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    @apply text-white;
+    line-height: 20px;
+  }
+}
+
+/** Your own styles for image lazy static */
+.blurImage {
+    filter: blur(0);
+    img {
+      filter: blur(25px);
+    }
+  }
+  
+  .blur-up {
+    -webkit-filter: blur(25px);
+    filter: blur(25px);
+    transition: filter 400ms, -webkit-filter 400ms;
+  }
+  
+  .blur-up.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
