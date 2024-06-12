@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './variables.scss';
+
 * {
     padding: 0;
     margin: 0;
@@ -58,21 +60,70 @@ button:active {
   }
 }
 
+h1 {
+  @apply font-bold;
+  line-height: 44px;
+  font-size: 32px;
+}
+
+h3 {
+  @apply font-bold;
+  line-height: 33px;
+  font-size: 24px;
+}
+
+p {
+  font-weight: 400;
+  color: #63666b;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.textScript {
+  font-size: 24px;
+  line-height: 29px;
+  color: $primary-color;
+}
+
+.floatFlex {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.flexContainer {
+  display: flex;
+  @apply flex-col;
+  @apply justify-center;
+  @apply items-center;
+  padding: 50px 20px;
+
+  @screen lg {
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px 15px;
+  }
+}
+
 /** Your own styles for image lazy static */
 .blurImage {
     filter: blur(0);
+
     img {
       filter: blur(25px);
     }
-  }
+}
   
-  .blur-up {
-    -webkit-filter: blur(25px);
-    filter: blur(25px);
-    transition: filter 400ms, -webkit-filter 400ms;
-  }
-  
-  .blur-up.lazyloaded {
-    -webkit-filter: blur(0);
-    filter: blur(0);
-  }
+.blur-up {
+  -webkit-filter: blur(25px);
+  filter: blur(25px);
+  transition: filter 400ms, -webkit-filter 400ms;
+}
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}

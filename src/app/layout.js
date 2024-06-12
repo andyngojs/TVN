@@ -1,7 +1,5 @@
-import { Inter } from "next/font/google";
+import { inter } from "./fonts";
 import "@/styles/globals.scss";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "TVN - Cty CP TM Truss Viêt Nam",

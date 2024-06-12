@@ -1,4 +1,3 @@
-"use client";
 import clsx from "clsx";
 import dynamic from "next/dynamic";
 import styles from "@/styles/components/heroBlock.module.scss";
@@ -25,7 +24,6 @@ export default function HeroBlock({
         )}
       >
         {!!imgBackgroundUrl && (
-        
           <LazyStaticImage
             src={imgBackgroundUrl}
             previewSrc={imgBackgroundUrlPreview}
