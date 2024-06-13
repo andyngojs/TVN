@@ -82,12 +82,7 @@ export default function Layout({children}) {
           </div>
 
           <div className={clsx('', styles.footerBlock)}>
-            <div className={clsx(styles.blockTitle)}>Sản phẩm</div>
-
-          </div>
-
-          <div className={clsx('', styles.footerBlock)}>
-            <div className={clsx(styles.blockTitle)}>Dự án</div>
+            <div className={clsx(styles.blockTitle)}>Dịch vụ</div>
 
           </div>
 
