@@ -1,48 +1,49 @@
-import Link from "next/link";
+import dynamic from "next/dynamic";
 import clsx from "clsx";
-import { dancing_script } from "@/app/fonts";
 import styles from "@/styles/components/highLightBlock.module.scss";
 
+const LazyStaticImage = dynamic(() => import("./LazyStaticImage"));
+
 function HighLightBlock({
-  subTitle,
-  title,
-  descriptions = [],
-  titleCTAButton,
-  linkCTAButton,
-  titleClassName,
+  imageBackgroundUrl,
+  imgBackgroundUrlPreview,
+  imgBackgroundClassName,
   containerClassName,
+  contentClassName,
+  children,
 }) {
-  function renderDescription() {
-    return descriptions.map((description, index) => {
-      return (
-        <p className="mt-7" key={index}>
-          {description}
-        </p>
-      );
-    });
-  }
-
   return (
-    <div
-      className={clsx(
-        "flex flex-col flex-1 justify-center relative z-1 lg:px-50",
-        containerClassName
+    <section className={clsx("relative", containerClassName)}>
+      {!!imageBackgroundUrl && (
+        <div className={clsx(styles.imageBackground)}>
+          <LazyStaticImage
+            src={imageBackgroundUrl}
+            previewSrc={imgBackgroundUrlPreview}
+            className={imgBackgroundClassName}
+          />
+        </div>
       )}
-    >
-      <p className={clsx(dancing_script.className, "textScript")}>{subTitle}</p>
-      <h3 className={clsx("uppercase mt-4", titleClassName)}>{title}</h3>
 
-      <div className={clsx(styles.highLightDescription)}>
-        {renderDescription()}
+      <div
+        className={clsx(
+          "flexContainer max-w-app-width m-0-auto",
+          contentClassName
+        )}
+      >
+        {children}
       </div>
-
-      {titleCTAButton && (
-        <Link href={linkCTAButton} className={clsx("btn self-start mt-10")}>
-          {titleCTAButton}
-        </Link>
-      )}
-    </div>
+    </section>
   );
 }
 
 export default HighLightBlock;
+
+function Item({ children, className, ...props }) {
+  return (
+    <div className={clsx("floatFlex", className)} {...props}>
+      {children}
+    </div>
+  );
+}
+
+HighLightBlock.Item = Item;

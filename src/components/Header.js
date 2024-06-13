@@ -28,19 +28,19 @@ const NAV_DATA = [
   },
   {
     title: 'Giới thiệu',
-    link: '#',
+    link: '/about',
   },
   {
     title: 'Sản phẩm',
-    link: '#',
+    link: '/project',
   },
   {
     title: 'Dịch vụ',
-    link: '#',
+    link: '/service',
   },
   {
     title: 'Liên hệ',
-    link: '#',
+    link: '/contact',
   },
 ];
 
