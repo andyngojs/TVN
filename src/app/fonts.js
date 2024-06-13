@@ -1,4 +1,4 @@
-import { Inter, Dancing_Script, Nunito } from "next/font/google";
+import { Dancing_Script, Nunito } from "next/font/google";
 
 export const nunito = Nunito({ subsets: ["latin"], display: "swap" });
 

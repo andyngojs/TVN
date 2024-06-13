@@ -31,12 +31,12 @@ const NAV_DATA = [
     link: '/about',
   },
   {
-    title: 'Sản phẩm',
-    link: '/project',
-  },
-  {
     title: 'Dịch vụ',
     link: '/service',
+  },
+  {
+    title: 'Dự án',
+    link: '/project',
   },
   {
     title: 'Liên hệ',

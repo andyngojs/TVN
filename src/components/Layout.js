@@ -25,6 +25,10 @@ const INFO_COMPANY_DATA = [
     value: config.masothue,
   },
   {
+    title: 'Ngày thành lập',
+    value: config.foundedTime,
+  },
+  {
     title: 'Trụ sở',
     value: config.headquarter,
   },
