@@ -1,12 +1,15 @@
 {
-    "name": "Truss Việt Nam",
-    "hotline_formatted": "02206.585.666 – 02206.563.333",
-    "hotline": "02206585666 - 02206563333",
-    "email": "trussvietnam@gmail.com",
+    "name": "SẮC VIỆT ENTERTAINMENT",
+    "fullNameCompany": "Công ty cổ phần thương mại và dịch vụ giải trí Sắc Việt",
+    "foundedTime": "25/11/2014",
+    "headquarter": "146 Yết Kiêu - Phường Hải Tân - TP. Hải Dương - Tỉnh Hải Dương",
     "address": "146 Yết Kiêu, Phường Hải Tân, Tp.Hải Dương",
+    "masothue": "0801100020",
+    "hotline_formatted": "02206.563.333",
+    "hotline": "02206563333",
+    "email": "sacviet.media102@gmail.com",
     "logo": "/images/logo.png",
-    "nameFacebook": "TVN",
-    "fullNameCompany": "Công ty cổ phần thương mại Truss Việt Nam",
-    "masothue": "0801286488",
-    "headquarter": "Số 275 phố Việt Hòa, Phường Việt Hòa, Thành phố Hải Dương, Tỉnh Hải Dương, Việt Nam"
+    "nameFacebook": "SẮC VIỆT ENTERTAINMENT",
+    "facebookLink": "https://fb.com/",
+    "googleMapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.8517080388942!2d106.3307519747115!3d20.918284991564953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31359bd719d8d451%3A0xaee9889fee1db832!2sC%C3%B4ng%20Ty%20CP%20TM%20Truss%20Vi%E1%BB%87t%20Nam!5e0!3m2!1sen!2s!4v1718261568071!5m2!1sen!2s"
 }

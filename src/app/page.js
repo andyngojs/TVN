@@ -153,8 +153,8 @@ export default function Home() {
         imgBackgroundUrlPreview={"/images/bg.png"}
       >
         <h1 className="mb-5">
-          Truss Việt Nam - Đơn vị cung cấp truss nhôm nhập khẩu hàng đầu Việt
-          Nam
+          SẮC VIỆT ENTERTAINMENT - Tổ chức sự kiện chuyên nghiệp và sáng tạo
+          hàng đầu Việt Nam
         </h1>
         <Link href={"/contact"}>
           <p className={clsx("btn")}>Liên hệ ngay</p>
