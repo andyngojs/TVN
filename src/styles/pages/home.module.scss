@@ -15,3 +15,160 @@
         margin-top: 30px;
     }
 }
+
+.productImg {
+    @apply w-full;
+    @apply h-full;
+    @apply object-cover;
+}
+
+.contentFeedbackWrapper {
+    display: block !important;
+    > img {
+      top: 0;
+      left: 0;
+    }
+    @screen lg {
+      display: flex;
+    }
+}
+  
+.contentFeedbackContainer {
+    margin: 0 auto;
+    p {
+      text-align: center;
+    }
+}
+
+.cardFeedbackContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px 30px;
+    // min-height: 300px;
+
+    .contentCardFeedback {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > h5 {
+         margin-top: 26px;
+        }
+        > p {
+            margin-top: 15px;
+        }
+    }
+
+    @screen lg {
+      padding: 50px;
+    }
+}
+
+.feedbackCarousel {
+    margin-top: 30px;
+    align-self: stretch;
+    
+     [class*="slick-track"] {
+       align-items: center;
+       display: flex;
+     }
+    
+     [class*="slick-slide"] {
+        margin: 0 15px;
+        // max-width: 570px;
+      }
+    
+      [class*="slick-next"] {
+        width: 40px;
+        height: 40px;
+        right: -5px;
+        border-radius: 20px;
+        overflow: hidden;
+        &::before {
+          content: "";
+          background-image: url("/icons/arrow-right.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          @apply text-white;
+          @apply bg-red-600;
+          opacity: 1;
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        }
+      }
+    
+      [class*="slick-prev"] {
+        width: 40px;
+        height: 40px;
+        left: -5px;
+        border-radius: 20px;
+        overflow: hidden;
+        z-index: 2;
+        &::before {
+          content: "";
+          background-image: url("/icons/arrow-right.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          transform: rotate(180deg);
+          @apply text-white;
+          @apply bg-red-600;
+          opacity: 1;
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        }
+      }
+    
+      @screen lg {
+        margin-top: 60px;
+      }
+}
+
+.slickDots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    li {
+      width: 30px;
+      height: 6px;
+      margin-left: 5px;
+      margin-right: 5px;
+      background-color: rgba(#fff, 0.3);
+      > button {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  
+    [class*="slick-active"] {
+      @apply bg-red-600;
+    }
+  
+    @screen lg {
+      margin-top: 50px;
+    }
+}
+
+.cardFeedbackAvatar {
+    @apply object-cover;
+    width: 64px;
+    height: 64px;
+    border-radius: 45px;
+    margin-top: 20px;
+
+    @screen lg {
+      margin-top: 30px;
+    }
+}
+  
