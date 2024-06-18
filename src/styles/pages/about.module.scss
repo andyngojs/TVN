@@ -1,0 +1,53 @@
+.brandStory_Heading {
+    @apply relative;
+    padding: 30px 0;
+    @apply flex-col;
+
+    @screen lg {
+        padding-top: 100px;
+    }
+}
+
+.brandStory_Content {
+    max-width: 770px;
+
+    h3 {
+        color: #63666b;
+    }
+}
+
+.coreValueWrapper {
+    max-width: unset;
+    padding: 0;
+}
+
+.groupCardContainer {
+    padding: 30px 0 0;
+  
+    @screen lg {
+      padding-top: 60px;
+    }
+}
+
+.cardWrapper {
+    flex-direction: unset;
+    padding: 15px 0;
+  
+    @screen lg {
+      padding: 0 15px;
+    }
+  }
+
+.cardIconContainer {
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    @apply bg-red-600;
+    border-radius: 50%;
+    padding: 20px;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}

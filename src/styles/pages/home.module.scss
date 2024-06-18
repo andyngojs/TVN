@@ -9,6 +9,23 @@
     overflow: hidden;
 }
 
+.groupCardContainer {
+  padding: 30px 0 0;
+
+  @screen lg {
+    padding-top: 60px;
+  }
+}
+
+.cardWrapper_Highlight {
+  flex-direction: unset;
+  padding: 15px 0;
+
+  @screen lg {
+    padding: 0 15px;
+  }
+}
+
 .productCardRowContainer {
     padding: 0;
 

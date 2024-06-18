@@ -32,7 +32,7 @@ const DATA_FEATURE = [
     icon: "/images/badge.png",
     title: "Sản phẩm vượt trội",
     description:
-      "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất.",
+      "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ",
   },
 ];
 
@@ -90,19 +90,20 @@ export default function Home() {
 
   function renderCardFeature(dataFeatures = DATA_FEATURE) {
     return dataFeatures.map((item, index) => (
-      <Card
+      <HighLightBlock.Item
         key={index}
-        className={
-          "bg-white flex flex-col flex-1 justify-center items-center py-10 px-6 hover:lg:-translate-y-5 hover:lg:transition-all"
-        }
+        className={clsx(styles.cardWrapper_Highlight)}
       >
-        <div className="border-0">
+        <Card
+          key={index}
+          className={"hover:lg:-translate-y-5 hover:lg:transition-all"}
+        >
           <Image priority src={item.icon} alt="icon-1" width={58} height={58} />
-        </div>
 
-        <h5 className="mt-8 font-bold text-xl">{item.title}</h5>
-        <p className="text-center mt-5">{item.description}</p>
-      </Card>
+          <h5 className="mt-8 font-bold text-xl text-center">{item.title}</h5>
+          <p className="text-center mt-5">{item.description}</p>
+        </Card>
+      </HighLightBlock.Item>
     ));
   }
 
@@ -161,7 +162,10 @@ export default function Home() {
         </Link>
       </HeroBlock>
 
-      <HighLightBlock containerClassName="bg-white">
+      <HighLightBlock
+        imageBackgroundUrl={"/images/bg-page-1.png"}
+        imgBackgroundUrlPreview={"/images/bg-page-1.png"}
+      >
         <HighLightBlock.Item>
           <Image
             priority
@@ -218,10 +222,20 @@ export default function Home() {
           Vì sao chọn Sắc Việt Entertainment?
         </h3>
 
-        <div className={clsx("flexContainer gap-6")}>{renderCardFeature()}</div>
+        <div
+          className={clsx(
+            "flexContainer !items-stretch pl-0 pr-0",
+            styles.groupCardContainer
+          )}
+        >
+          {renderCardFeature()}
+        </div>
       </HeroBlock>
 
-      <HighLightBlock containerClassName={"bg-white"}>
+      <HighLightBlock
+        imageBackgroundUrl={"/images/bg-page-1.png"}
+        imgBackgroundUrlPreview={"/images/bg-page-1.png"}
+      >
         <HighLightBlock.Item>
           <div className={clsx("flex flex-col justify-center lg:px-50")}>
             <p className={clsx(dancing_script.className, "textScript")}>
