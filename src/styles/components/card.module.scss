@@ -1,0 +1,15 @@
+.cardContainer {
+    display: flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply justify-center;
+    @apply bg-white;
+    width: 100%;
+    padding: 40px 25px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    @screen lg {
+        width: auto;
+    }
+}

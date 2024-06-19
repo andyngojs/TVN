@@ -51,6 +51,8 @@ export default function Contact() {
         </HighLightBlock.Item>
 
         <div className={styles.contactInfoContainer}>
+          <h3>Liên hệ</h3>
+
           <p>SDT: {config.hotline_formatted}</p>
           <p>Email: {config.email}</p>
           <p>Địa chỉ: {config.address}</p>
