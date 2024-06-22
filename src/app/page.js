@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 import { dancing_script } from "@/app/fonts";
+import { getDatabase } from "@/lib/notion.config";
 import Layout from "@/components/Layout";
 import HeroBlock from "@/components/HeroBlock";
 import HighLightBlock from "@/components/HighLightBlock";
@@ -69,7 +70,12 @@ const CARD_FEEDBACK_DATA = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const data = await getDatabase({indexPage: 0})
+
+  let dataHome = data.filter(page => page.page_name === 'Home')[0]
+  console.log(dataHome)
+
   function renderCardCustomerFeedback() {
     return CARD_FEEDBACK_DATA.map((feedback, index) => (
       <div key={index}>
@@ -154,8 +160,7 @@ export default function Home() {
         imgBackgroundUrlPreview={"/images/bg.png"}
       >
         <h1 className="mb-5">
-          SẮC VIỆT ENTERTAINMENT - Tổ chức sự kiện chuyên nghiệp và sáng tạo
-          hàng đầu Việt Nam
+          {dataHome.greeting_title_home}
         </h1>
         <Link href={"/contact"}>
           <p className={clsx("btn")}>Liên hệ ngay</p>
@@ -188,18 +193,7 @@ export default function Home() {
 
             <div className={clsx(styles.highLightDescription)}>
               <p className="mt-7">
-                Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu
-                hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh
-                thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần
-                Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô
-                phát triển
-              </p>
-              <p className="mt-7">
-                Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu
-                hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh
-                thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần
-                Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô
-                phát triển
+                {dataHome.description_intro_home}
               </p>
             </div>
 
