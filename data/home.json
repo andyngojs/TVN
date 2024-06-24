@@ -1,6 +1,7 @@
 {
   "text_greeting": "SẮC VIỆT ENTERTAINMENT - Tổ chức sự kiện chuyên nghiệp và sáng tạo hàng đầu Việt Nam",
   "title_CTA": "Liên hệ ngay",
+  "bg_banner_highligh": "https://scontent.fhph3-1.fna.fbcdn.net/v/t39.30808-6/448832309_1466691570656177_4912477175063162029_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=3Mxm990YDv0Q7kNvgEitXjr&_nc_ht=scontent.fhph3-1.fna&oh=00_AYB9Zwo_ZAZdbTs65UPOVi_21xn7nOhePPiUqCf91EVqzw&oe=667F65BA",
   "description_highligh_1": [
     "Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô phát triển",
     "Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô phát triển"
@@ -29,12 +30,11 @@
     }
   ],
   "description_service_highligh": [
-    "Hãy cùng khám phá những dịch vụ tổ chức Sự Kiện Chuyên Nghiệp tại Hải Dương, Công Ty Cổ Phần Thương Mại Và Dịch Vụ Giải Trí Sắc Việt",
+    "Hãy cùng khám phá những dịch vụ tổ chức sự kiện chuyên nghiệp tại Hải Dương, Công Ty Cổ Phần Thương Mại Và Dịch Vụ Giải Trí Sắc Việt",
     [
-      "Tổ Chức Lễ Khai Trương",
-      "Tổ Chức Lễ Khai Trương",
-      "Tổ Chức Lễ Khai Trương",
-      "Tổ Chức Lễ Khai Trương"
+      "Tổ Chức sự kiện",
+      "Sự kiện giải trí, kỷ niệm, doanh nghiệp",
+      "Cho thuê thiết bị sự kiện"
     ]
   ],
   "projects_highligh": [
