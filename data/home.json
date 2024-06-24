@@ -1,0 +1,68 @@
+{
+  "text_greeting": "SẮC VIỆT ENTERTAINMENT - Tổ chức sự kiện chuyên nghiệp và sáng tạo hàng đầu Việt Nam",
+  "title_CTA": "Liên hệ ngay",
+  "description_highligh_1": [
+    "Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô phát triển",
+    "Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô phát triển"
+  ],
+  "title_see_more_btn": "Đọc thêm về chúng tôi",
+  "card_feature_highligh": [
+    {
+      "icon": "/images/badge.png",
+      "title": "Sản phẩm vượt trội",
+      "description": "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất."
+    },
+    {
+      "icon": "/images/badge.png",
+      "title": "HỢP ĐỒNG RÕ RÀNG",
+      "description": "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất."
+    },
+    {
+      "icon": "/images/badge.png",
+      "title": "Sản phẩm vượt trội",
+      "description": "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất."
+    },
+    {
+      "icon": "/images/badge.png",
+      "title": "Sản phẩm vượt trội",
+      "description": "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ"
+    }
+  ],
+  "description_service_highligh": [
+    "Hãy cùng khám phá những dịch vụ tổ chức Sự Kiện Chuyên Nghiệp tại Hải Dương, Công Ty Cổ Phần Thương Mại Và Dịch Vụ Giải Trí Sắc Việt",
+    [
+      "Tổ Chức Lễ Khai Trương",
+      "Tổ Chức Lễ Khai Trương",
+      "Tổ Chức Lễ Khai Trương",
+      "Tổ Chức Lễ Khai Trương"
+    ]
+  ],
+  "projects_highligh": [
+    "https://drive.google.com/file/d/1ILqnyakfbuHzZgegDJMzy5TCjav7Rw-F/view?usp=sharing",
+    "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing",
+    "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing",
+    "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing",
+    "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing",
+    "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing"
+  ],
+  "card_feedback_client": [
+    {
+      "icon": "/icons/quote.svg",
+      "image": "/images/avatar1.jpeg",
+      "title": "Khach hang 1",
+      "description": "Tôi rất hài lòng với dịch vụ của Sắc Việt Entertainment. Đội ngũ nhân viên rất chuyên nghiệp và tận tâm. Họ luôn lắng nghe và đáp ứng mọi yêu cầu của khách hàng. Cảm ơn Sắc Việt đã mang đến cho chúng tôi một sự kiện tuyệt vời!"
+    },
+    {
+      "icon": "/icons/quote.svg",
+      "image": "/images/avatar1.jpeg",
+      "title": "Khach hang 2",
+      "description": "Chất lượng âm thanh và ánh sáng tại sự kiện do Sắc Việt Entertainment tổ chức thật xuất sắc. Mọi thứ được chuẩn bị kỹ lưỡng và chuyên nghiệp. Chắc chắn tôi sẽ tiếp tục sử dụng dịch vụ của các bạn trong những sự kiện sắp tới."
+    },
+    {
+      "icon": "/icons/quote.svg",
+      "image": "/images/avatar1.jpeg",
+      "title": "Khach hang 3",
+      "description": "Sắc Việt Entertainment đã mang đến cho chúng tôi một chương trình vô cùng sáng tạo và độc đáo. Từ khâu ý tưởng cho đến khâu thực hiện, mọi thứ đều được chăm chút tỉ mỉ. Sự kiện diễn ra suôn sẻ và để lại ấn tượng sâu sắc cho tất cả khách mời."
+    }
+  ]
+}
