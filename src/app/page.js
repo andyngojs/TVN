@@ -8,70 +8,13 @@ import HighLightBlock from "@/components/HighLightBlock";
 import Card from "@/components/Card";
 import Carousel from "@/components/Carousel";
 import styles from "@/styles/pages/home.module.scss";
+import { getDriveImageUrl } from "@/services/dataHandler";
 
-const DATA_FEATURE = [
-  {
-    icon: "/images/badge.png",
-    title: "Sản phẩm vượt trội",
-    description:
-      "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất.",
-  },
-  {
-    icon: "/images/badge.png",
-    title: "HỢP ĐỒNG RÕ RÀNG",
-    description:
-      "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất.",
-  },
-  {
-    icon: "/images/badge.png",
-    title: "Sản phẩm vượt trội",
-    description:
-      "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất.",
-  },
-  {
-    icon: "/images/badge.png",
-    title: "Sản phẩm vượt trội",
-    description:
-      "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ",
-  },
-];
+import dataHome from "../../data/home.json";
 
-const DATA_IMAGE_PRODUCT = [
-  "/images/anh-san-pham.jpg",
-  "/images/anh-san-pham.jpg",
-  "/images/anh-san-pham.jpg",
-  "/images/anh-san-pham.jpg",
-  "/images/anh-san-pham.jpg",
-  "/images/anh-san-pham.jpg",
-];
-
-const CARD_FEEDBACK_DATA = [
-  {
-    icon: "/icons/quote.svg",
-    image: "/images/avatar1.jpeg",
-    title: "Khach hang 1",
-    description:
-      "Tôi rất hài lòng với dịch vụ của Sắc Việt Entertainment. Đội ngũ nhân viên rất chuyên nghiệp và tận tâm. Họ luôn lắng nghe và đáp ứng mọi yêu cầu của khách hàng. Cảm ơn Sắc Việt đã mang đến cho chúng tôi một sự kiện tuyệt vời!",
-  },
-  {
-    icon: "/icons/quote.svg",
-    image: "/images/avatar1.jpeg",
-    title: "Khach hang 2",
-    description:
-      "Chất lượng âm thanh và ánh sáng tại sự kiện do Sắc Việt Entertainment tổ chức thật xuất sắc. Mọi thứ được chuẩn bị kỹ lưỡng và chuyên nghiệp. Chắc chắn tôi sẽ tiếp tục sử dụng dịch vụ của các bạn trong những sự kiện sắp tới.",
-  },
-  {
-    icon: "/icons/quote.svg",
-    image: "/images/avatar1.jpeg",
-    title: "Khach hang 3",
-    description:
-      "Sắc Việt Entertainment đã mang đến cho chúng tôi một chương trình vô cùng sáng tạo và độc đáo. Từ khâu ý tưởng cho đến khâu thực hiện, mọi thứ đều được chăm chút tỉ mỉ. Sự kiện diễn ra suôn sẻ và để lại ấn tượng sâu sắc cho tất cả khách mời.",
-  },
-];
-
-export default function Home() {
+export default async function Home() {
   function renderCardCustomerFeedback() {
-    return CARD_FEEDBACK_DATA.map((feedback, index) => (
+    return dataHome.card_feedback_client.map((feedback, index) => (
       <div key={index}>
         <Card className={clsx("bg-white", styles.cardFeedbackContainer)}>
           <div className={clsx(styles.contentCardFeedback)}>
@@ -88,8 +31,8 @@ export default function Home() {
     ));
   }
 
-  function renderCardFeature(dataFeatures = DATA_FEATURE) {
-    return dataFeatures.map((item, index) => (
+  function renderCardFeature() {
+    return dataHome.card_feature_highligh.map((item, index) => (
       <HighLightBlock.Item
         key={index}
         className={clsx(styles.cardWrapper_Highlight)}
@@ -107,21 +50,24 @@ export default function Home() {
     ));
   }
 
-  function renderRowCardImageProduct(dataRowImage = DATA_IMAGE_PRODUCT) {
+  function renderRowCardImageProduct() {
     let temp = [],
       productImages = [];
 
-    dataRowImage.forEach((image, index) => {
+    dataHome.projects_highligh.forEach((image, index) => {
+      const imageUrl = getDriveImageUrl(image);
+
       temp.push(
         <div key={index} className={clsx("floatFlex", styles.cardWrapper)}>
           <Card
             key={index}
-            className={clsx(
-              "w-[390px] h-[290px] overflow-hidden",
-              styles.productCardContainer
-            )}
+            className={clsx("w-[390px] h-[290px] overflow-hidden")}
           >
-            <img className={styles.productImg} src={image} />
+            <img
+              loading="lazy"
+              className={clsx(styles.productImg, "rounded-2xl")}
+              src={imageUrl}
+            />
           </Card>
         </div>
       );
@@ -153,12 +99,9 @@ export default function Home() {
         imgBackgroundUrl={"/images/bg.png"}
         imgBackgroundUrlPreview={"/images/bg.png"}
       >
-        <h1 className="mb-5">
-          SẮC VIỆT ENTERTAINMENT - Tổ chức sự kiện chuyên nghiệp và sáng tạo
-          hàng đầu Việt Nam
-        </h1>
+        <h1 className="mb-5">{dataHome.text_greeting}</h1>
         <Link href={"/contact"}>
-          <p className={clsx("btn")}>Liên hệ ngay</p>
+          <p className={clsx("btn")}>{dataHome.title_CTA || "Liên hệ ngay"}</p>
         </Link>
       </HeroBlock>
 
@@ -187,24 +130,15 @@ export default function Home() {
             </h3>
 
             <div className={clsx(styles.highLightDescription)}>
-              <p className="mt-7">
-                Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu
-                hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh
-                thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần
-                Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô
-                phát triển
-              </p>
-              <p className="mt-7">
-                Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu
-                hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh
-                thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần
-                Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô
-                phát triển
-              </p>
+              {dataHome.description_highligh_1.map((desc, index) => (
+                <p key={index} className="mt-7">
+                  {desc}
+                </p>
+              ))}
             </div>
 
             <Link href={"/about"} className={clsx("btn self-start mt-10")}>
-              Đọc thêm về chúng tôi
+              {dataHome.title_see_more_btn || "Đọc thêm về chúng tôi"}
             </Link>
           </div>
         </HighLightBlock.Item>
@@ -244,16 +178,23 @@ export default function Home() {
             <h3 className={clsx("uppercase mt-4")}>Dịch vụ của chúng tôi</h3>
 
             <div className={clsx(styles.highLightDescription)}>
-              <p className="mt-7">
-                Hãy cùng khám phá những dịch vụ tổ chức Sự Kiện Chuyên Nghiệp
-                Tại Hải Dương, Công Ty Cổ Phần Thương Mại Và Dịch Vụ Giải Trí
-                Sắc Việt
-              </p>
-              <ul>
-                <li>Tổ Chức Lễ Khai Trương</li>
-                <li>Tổ Chức Lễ Khai Trương</li>
-                <li>Tổ Chức Lễ Khai Trương</li>
-              </ul>
+              {dataHome.description_service_highligh.map((item, index) => {
+                if (typeof item === "string") {
+                  return (
+                    <p key={index} className="mt-7">
+                      {item}
+                    </p>
+                  );
+                } else {
+                  return (
+                    <ul className="mt-4">
+                      {item?.map((text, index) => {
+                        return <li key={index}>{text}</li>;
+                      })}
+                    </ul>
+                  );
+                }
+              })}
             </div>
 
             <Link href={"/service"} className={clsx("btn self-start mt-10")}>

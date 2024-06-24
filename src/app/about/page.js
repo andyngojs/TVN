@@ -9,6 +9,9 @@ import HeroBlock from "@/components/HeroBlock";
 import Card from "@/components/Card";
 import styles from "@/styles/pages/about.module.scss";
 
+import data from "../../../data/about.json";
+import { getDriveImageUrl } from "@/services/dataHandler";
+
 const DATA_CONTACT = [
   {
     methodName: "Hotline",
@@ -27,8 +30,10 @@ const DATA_CONTACT = [
 ];
 
 export default function About() {
-  function renderCardContactMethod(dataFeatures = DATA_CONTACT) {
-    return dataFeatures.map((item, index) => (
+  const imageIntro = getDriveImageUrl(data.image_intro);
+
+  function renderCardContactMethod() {
+    return DATA_CONTACT.map((item, index) => (
       <HighLightBlock.Item key={index} className={styles.cardWrapper}>
         <Card>
           <div className={styles.cardIconContainer}>
@@ -67,7 +72,7 @@ export default function About() {
         <div className={clsx("relative w-full pb-[50%] ")}>
           <Image
             className="blur-up lazyloaded"
-            src={"/images/bg-about-1.jpg"}
+            src={imageIntro}
             fill
             alt="bg-1"
           />
@@ -79,49 +84,24 @@ export default function About() {
         </div>
 
         <div className={clsx("relative w-full", styles.brandStory_Content)}>
-          <p>
-            Sắc Việt Entertainment là thương hiệu hàng đầu trong lĩnh vực tổ
-            chức sự kiện, được thành lập vào năm 2014. Chúng tôi cung cấp đa
-            dạng các dịch vụ từ lễ khởi công, lễ khánh thành, đến sự kiện kỷ
-            niệm, tiệc tất niên, và đám cưới VIP. Ngoài ra, chúng tôi còn tổ
-            chức các hội nghị, hội thảo, và sự kiện giáo dục như lễ khai giảng
-            và tốt nghiệp. Chúng tôi cũng chuyên về sự kiện quảng bá và tiếp
-            thị, bao gồm giới thiệu sản phẩm, triển lãm, và các sự kiện thời
-            trang. Đối với các hoạt động thể thao và giải trí, chúng tôi tổ chức
-            ngày hội thể thao, sự kiện âm nhạc, và lễ trao giải.
-          </p>
-
-          <p className="mt-3">
-            Bên cạnh việc tổ chức sự kiện, Sắc Việt còn cung cấp dịch vụ cho
-            thuê thiết bị sự kiện chất lượng cao, bao gồm sân khấu, thiết bị âm
-            thanh ánh sáng, và nhiều hơn nữa, để đáp ứng mọi nhu cầu của khách
-            hàng. Chúng tôi tự hào mang đến dịch vụ chuyên nghiệp, sáng tạo, và
-            đảm bảo chất lượng cho mỗi sự kiện.
-          </p>
+          {data.description_about_intro.map((item, index) => {
+            return (
+              <p key={index} className={index === 0 ? "" : "mt-3"}>
+                {item}
+              </p>
+            );
+          })}
 
           <h3 className="mt-3">Tầm nhìn</h3>
-          <p className="mb-1">
-            Xây dựng Sắc Việt Entertainment trở thành công ty tổ chức sự kiện
-            chuyên nghiệp hàng đầu của khu vực Miền Bắc.
-          </p>
+          <p className="mb-1">{data.vision_content}</p>
 
           <h3 className="mt-3">Sứ mệnh</h3>
           <ul className="mt-1">
-            <li>
-              Đối với khách hàng: Sáng tạo và cung cấp những sản phẩm đạt tiêu
-              chuẩn về chất lượng, giá thành, tiến độ cùng dịch vụ chuyên
-              nghiệp, thỏa mãn tối đa nhu cầu và mong muốn của khách hàng.{" "}
-            </li>
-            <li>
-              Đối với nhân sự: “Đoàn kết + Quan tâm + Chia sẻ = Cùng phát triển”
-              là định hướng mà Sắc Việt cam kết mang đến cho cán bộ công nhân
-              viên làm việc tại công ty.
-            </li>
-            <li>
-              Đối với cộng đồng: Sắc Việt cam kết mang đến cho cộng đồng những
-              giá trị tốt đẹp nhất bằng sự trân trọng và trách nhiệm của mình
-              với cuộc sống con người và xã hội.
-            </li>
+            {data.mission_content.map((item, index) => (
+              <li key={index} className={index === 0 ? "" : "mt-2"}>
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
       </HighLightBlock>
@@ -142,8 +122,7 @@ export default function About() {
               Giá trị cốt lõi
             </p>
             <h3 className={clsx("uppercase mt-4 text-center text-white")}>
-              Trở thành biểu tượng niềm tin hàng đầu tại Việt Nam cung cấp dịch
-              vụ tổ chức sự kiện và cho thuê thiết bị sự kiện
+              {data.core_value}
             </h3>
           </HeroBlock>
         </HighLightBlock.Item>
