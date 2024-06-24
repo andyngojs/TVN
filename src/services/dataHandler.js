@@ -23,7 +23,7 @@ export async function getDataHandler() {
   }
 }
 
-function getDriveImageUrl(shareUrl) {
+export function getDriveImageUrl(shareUrl) {
   const fileId = shareUrl.match(/[-\w]{25,}/)[0];
   const imageUrl = `https://lh3.googleusercontent.com/d/${fileId}`;
   return imageUrl;
