@@ -9,15 +9,15 @@ module.exports = {
     extend: {
       textColor: (theme) => ({
         ...theme("colors"),
-        h: theme("colors.black"),
+        h: theme("colors.white"),
         p: theme("colors.gray"),
-        primary: theme("colors.red.default"),
+        primary: theme("colors.yellow.default"),
       }),
       backgroundColor: (theme) => ({
         ...theme("colors"),
         body: theme('colors["light-gray"]'),
-        primary: theme("colors.red.default"),
-        "primary-hover": theme("colors.red.dark"),
+        primary: theme("colors.yellow.default"),
+        "primary-hover": theme("colors.yellow.dark"),
       }),
       spacing: {
         "btn-x": "30px",
