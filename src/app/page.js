@@ -16,15 +16,15 @@ export default async function Home() {
   function renderCardCustomerFeedback() {
     return dataHome.card_feedback_client.map((feedback, index) => (
       <div key={index}>
-        <Card className={clsx("bg-white", styles.cardFeedbackContainer)}>
+        <Card className={clsx(styles.cardFeedbackContainer)}>
           <div className={clsx(styles.contentCardFeedback)}>
             <img src={feedback.icon} />
-            <p className={clsx("")}>{feedback.description}</p>
+            <p>{feedback.description}</p>
           </div>
 
           <div className={clsx("flex justify-center items-center")}>
             <img className={styles.cardFeedbackAvatar} src={feedback.image} />
-            <h5 className="ml-4 text-xl font-bold">{feedback.title}</h5>
+            <h5 className="ml-4 text-xl font-bold mt-3">{feedback.title}</h5>
           </div>
         </Card>
       </div>
@@ -39,9 +39,17 @@ export default async function Home() {
       >
         <Card
           key={index}
-          className={"hover:lg:-translate-y-5 hover:lg:transition-all"}
+          className={
+            "py-[40px] px-[25px] hover:lg:-translate-y-5 hover:lg:transition-all"
+          }
         >
-          <Image priority src={item.icon} alt="icon-1" width={58} height={58} />
+          <Image
+            priority
+            src={item.icon}
+            alt={`${item.title}`}
+            width={60}
+            height={60}
+          />
 
           <h5 className="mt-8 font-bold text-xl text-center">{item.title}</h5>
           <p className="text-center mt-5">{item.description}</p>
@@ -59,13 +67,10 @@ export default async function Home() {
 
       temp.push(
         <div key={index} className={clsx("floatFlex", styles.cardWrapper)}>
-          <Card
-            key={index}
-            className={clsx("w-[390px] h-[290px] overflow-hidden")}
-          >
+          <Card key={index} className={clsx(styles.productCardContainer)}>
             <img
               loading="lazy"
-              className={clsx(styles.productImg, "rounded-2xl")}
+              className={clsx(styles.productImg)}
               src={imageUrl}
             />
           </Card>
@@ -77,7 +82,7 @@ export default async function Home() {
           <div
             key={index}
             className={clsx(
-              "flexContainer items-stretch pl-0 pr-0 gap-x-4",
+              "flexContainer items-stretch pl-0 pr-0",
               styles.productCardRowContainer
             )}
           >
@@ -96,8 +101,8 @@ export default async function Home() {
     <Layout>
       <HeroBlock
         containerClassName={styles.highLightFirst}
-        imgBackgroundUrl={"/images/bg.png"}
-        imgBackgroundUrlPreview={"/images/bg.png"}
+        imgBackgroundUrl={dataHome.bg_banner_highligh}
+        imgBackgroundUrlPreview={dataHome.bg_banner_highligh}
       >
         <h1 className="mb-5">{dataHome.text_greeting}</h1>
         <Link href={"/contact"}>
@@ -106,34 +111,31 @@ export default async function Home() {
       </HeroBlock>
 
       <HighLightBlock
-        imageBackgroundUrl={"/images/bg-page-1.png"}
-        imgBackgroundUrlPreview={"/images/bg-page-1.png"}
+        imageBackgroundUrl={"/images/bg-page.png"}
+        imgBackgroundUrlPreview={"/images/bg-page.png"}
       >
         <HighLightBlock.Item>
           <Image
-            priority
             className="z-10"
-            src={"/images/logo.png"}
+            src={"/images/logo-1.png"}
             alt="logo"
-            width={500}
-            height={500}
+            width={900}
+            height={900}
           />
         </HighLightBlock.Item>
 
-        <HighLightBlock.Item>
+        <HighLightBlock.Item className="lg:px-50">
           <div className={clsx("flex flex-col justify-center lg:px-50")}>
             <p className={clsx(dancing_script.className, "textScript")}>
               Một chút về chúng tôi
             </p>
-            <h3 className={clsx("uppercase mt-4")}>
+            <h3 className={clsx(styles.highlightHeading)}>
               Giới thiệu về Sắc Việt Entertainment
             </h3>
 
             <div className={clsx(styles.highLightDescription)}>
               {dataHome.description_highligh_1.map((desc, index) => (
-                <p key={index} className="mt-7">
-                  {desc}
-                </p>
+                <p key={index}>{desc}</p>
               ))}
             </div>
 
@@ -152,7 +154,7 @@ export default async function Home() {
         <p className={clsx(dancing_script.className, "textScript text-center")}>
           Thế mạnh của chúng tôi
         </p>
-        <h3 className={clsx("uppercase mt-4")}>
+        <h3 className={clsx(styles.highlightHeading, "text-white text-center")}>
           Vì sao chọn Sắc Việt Entertainment?
         </h3>
 
@@ -167,33 +169,35 @@ export default async function Home() {
       </HeroBlock>
 
       <HighLightBlock
-        imageBackgroundUrl={"/images/bg-page-1.png"}
-        imgBackgroundUrlPreview={"/images/bg-page-1.png"}
+        contentClassName={"lg:flex-row-reverse"}
+        imageBackgroundUrl={"/images/bg-page.png"}
+        imgBackgroundUrlPreview={"/images/bg-page.png"}
       >
         <HighLightBlock.Item>
-          <div className={clsx("flex flex-col justify-center lg:px-50")}>
+          <Image
+            className="z-10"
+            src={"/images/logo-1.png"}
+            alt="logo"
+            width={900}
+            height={900}
+          />
+        </HighLightBlock.Item>
+
+        <HighLightBlock.Item className={clsx("lg:px-50 lg:pr-10")}>
+          <div className={clsx(styles.serviceContainer)}>
             <p className={clsx(dancing_script.className, "textScript")}>
               Những dịch vụ của Sắc Việt Entertainment
             </p>
-            <h3 className={clsx("uppercase mt-4")}>Dịch vụ của chúng tôi</h3>
+            <h3 className={clsx(styles.highlightHeading)}>Dịch vụ của chúng tôi</h3>
 
-            <div className={clsx(styles.highLightDescription)}>
+            <div
+              className={clsx(
+                styles.highLightDescription,
+                styles.highlightDescriptionSecond
+              )}
+            >
               {dataHome.description_service_highligh.map((item, index) => {
-                if (typeof item === "string") {
-                  return (
-                    <p key={index} className="mt-7">
-                      {item}
-                    </p>
-                  );
-                } else {
-                  return (
-                    <ul className="mt-4">
-                      {item?.map((text, index) => {
-                        return <li key={index}>{text}</li>;
-                      })}
-                    </ul>
-                  );
-                }
+                return <p key={index}>{item}</p>;
               })}
             </div>
 
@@ -202,20 +206,9 @@ export default async function Home() {
             </Link>
           </div>
         </HighLightBlock.Item>
-
-        <HighLightBlock.Item>
-          <Image
-            priority
-            className="z-10"
-            src={"/images/logo.png"}
-            alt="logo"
-            width={500}
-            height={500}
-          />
-        </HighLightBlock.Item>
       </HighLightBlock>
 
-      <HighLightBlock containerClassName={"bg-white"}>
+      <HighLightBlock>
         <HighLightBlock.Item>
           <div
             className={clsx(
@@ -225,7 +218,7 @@ export default async function Home() {
             <p className={clsx(dancing_script.className, "textScript")}>
               Hãy cùng khám phá
             </p>
-            <h3 className={clsx("uppercase mt-4")}>
+            <h3 className={clsx(styles.highlightHeading, 'text-center')}>
               Dự án của Sắc Việt Entertainment
             </h3>
 
@@ -243,7 +236,7 @@ export default async function Home() {
         <p className={clsx(dancing_script.className, "textScript")}>
           Hãy cùng xem
         </p>
-        <h3 className={clsx("uppercase mt-4 text-white")}>Khách hàng nói gì</h3>
+        <h3 className={clsx(styles.highlightHeading, "text-white text-center")}>Khách hàng nói gì</h3>
 
         <Carousel
           setting={{ dotsClass: styles.slickDots }}
