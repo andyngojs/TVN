@@ -83,13 +83,8 @@ export default function Layout({ children }) {
       <main style={{ marginTop: HEADER_HEIGHT }}>{children}</main>
 
       <footer className="w-full bg-neutral-950">
-        <div
-          className={clsx(
-            "flex flex-col lg:flex-row",
-            styles.footerMainContainer
-          )}
-        >
-          <div className={clsx("", styles.footerBlock)}>
+        <div className={clsx(styles.footerMainContainer)}>
+          <div className={clsx(styles.footerBlock)}>
             <div>
               <img
                 src={config.logo}
@@ -102,7 +97,7 @@ export default function Layout({ children }) {
             </div>
           </div>
 
-          <div className={clsx("", styles.footerBlock)}>
+          <div className={clsx(styles.footerBlock)}>
             <div className={clsx(styles.blockTitle)}>Dịch vụ</div>
 
             <div className={clsx(styles.blockContent)}>
@@ -110,7 +105,7 @@ export default function Layout({ children }) {
             </div>
           </div>
 
-          <div className={clsx("", styles.footerBlock)}>
+          <div className={clsx(styles.footerBlock)}>
             <div className={clsx("uppercase", styles.blockTitle)}>
               {config.fullNameCompany}
             </div>

@@ -1,8 +1,11 @@
 .footerMainContainer {
+    @apply flex;
+    @apply flex-col;
     margin: 0 auto;
     padding: 20px 15px;
 
     @screen lg {
+      @apply flex-row;
         max-width: 1170px;
         padding-top: 100px;
         padding-bottom: 100px;
