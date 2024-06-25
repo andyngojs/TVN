@@ -2,6 +2,7 @@
     padding-left: 40px;
     padding-right: 40px;
     color: #bbb;
+    @apply text-center;
 
     +.divider {
         border-left-width: 1px;
@@ -18,9 +19,11 @@
     @apply flex;
     @apply flex-col;
     margin: 0 auto;
+    @apply h-full;
 
     @screen lg {
         @apply flex-row;
+        @apply h-full;
     }
 }
 
@@ -29,7 +32,6 @@
     line-height: 33px;
 
     padding: 20px 15px;
-    box-shadow: inset 0px -1px 0px #ececec;
 
     @screen lg {
         font-size: 18px;
@@ -61,12 +63,16 @@
 .showNavMobile {
     @apply flex;
     @apply flex-col;
-    @apply bg-white;
+    @apply bg-black;
     width: 100%;
     height: 100%;
     z-index: 999;
     top: 0;
     left: 0;
+}
+
+.backdropMobileNav {
+    z-index: 4;
 }
 
 /** icon nav mobile toggle btn */

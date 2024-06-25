@@ -15,7 +15,7 @@ body {
     line-height: 24px;
     font-size: 15px;
     scroll-behavior: smooth;
-    @apply bg-slate-200;
+    @apply bg-black;
 }
 
 a {
@@ -36,7 +36,7 @@ button:active {
 }
 
 .btn {
-  @apply bg-red-600;
+  @apply bg-yellow-500;
   @apply px-btn-x;
   @apply py-btn-y;
   @apply text-white;
@@ -44,7 +44,7 @@ button:active {
   border-radius: 10px;
 
   &:hover {
-    @apply bg-red-800;
+    @apply bg-yellow-800;
   }
 
   > p,
@@ -68,44 +68,59 @@ h1 {
 
 h3 {
   @apply font-bold;
+  @apply text-white;
   line-height: 33px;
   font-size: 24px;
 }
 
+h5 {
+  @apply text-white;
+}
+
 p, ul > li {
   font-weight: 400;
-  color: #63666b;
+  color: #d1d5db;
   font-size: 15px;
   line-height: 24px;
 }
 
 .textScript {
+  @apply font-bold;
   font-size: 24px;
   line-height: 29px;
   color: $primary-color;
 }
 
-.floatFlex {
-  display: flex;
-  flex: 1 1;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-
 .flexContainer {
-  display: flex;
+  @apply flex;
   @apply flex-col;
-  @apply justify-center;
-  @apply items-center;
+  @apply relative;
   padding: 50px 20px;
 
   @screen lg {
-    flex-direction: row;
-    justify-content: center;
+    @apply flex-row;
+    @apply justify-center;
     padding: 100px 15px;
   }
+}
+
+.floatFlex {
+  @apply flex;
+  @apply flex-1;
+  @apply flex-col;
+  @apply justify-center;
+  @apply relative;
+  z-index: 1;
+}
+
+@mixin stickyBtn {
+  position: fixed;
+  bottom: 40px !important;
+  z-index: 9999;
+}
+
+.stickyBtn {
+  @include stickyBtn();
 }
 
 /** Your own styles for image lazy static */
