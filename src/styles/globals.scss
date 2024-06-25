@@ -73,8 +73,28 @@ h3 {
   font-size: 24px;
 }
 
-h5 {
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+
+  @screen lg {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+  }
+}
+
+h5, h6 {
   @apply text-white;
+}
+
+.input {
+  @apply bg-neutral-950;
+  @apply text-white;
+  padding: 15px;
+  border: 1px solid #262626;
+  border-radius: 10px;
 }
 
 p, ul > li {
