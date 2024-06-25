@@ -111,7 +111,7 @@ export default async function Home() {
       </HeroBlock>
 
       <HighLightBlock
-        imageBackgroundUrl={"/images/bg-page.png"}
+        imgBackgroundUrl={"/images/bg-page.png"}
         imgBackgroundUrlPreview={"/images/bg-page.png"}
       >
         <HighLightBlock.Item>
@@ -170,7 +170,7 @@ export default async function Home() {
 
       <HighLightBlock
         contentClassName={"lg:flex-row-reverse"}
-        imageBackgroundUrl={"/images/bg-page.png"}
+        imgBackgroundUrl={"/images/bg-page.png"}
         imgBackgroundUrlPreview={"/images/bg-page.png"}
       >
         <HighLightBlock.Item>
