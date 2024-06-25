@@ -1,12 +1,18 @@
 .highLightFirst {
-  // height:calc(100vw / 2);
-  // height: 111.11111vh;
+  height: 111.11111vh;
 }
 
 .cardWrapper {
-    flex-direction: unset;
-    border-radius: 30px;
-    overflow: hidden;
+  padding: 15px 0;                       
+  flex-direction: unset;
+
+    @screen lg {
+      padding: 0 15px;
+    }
+}
+
+.productCardContainer {
+  padding: 0 !important;
 }
 
 .groupCardContainer {
@@ -14,6 +20,45 @@
 
   @screen lg {
     padding-top: 60px;
+  }
+}
+
+.serviceContainer {
+  @screen lg {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.highlightHeading {
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.highLightDescription {
+  > p {
+    &:first-child {
+      margin-top: 30px;
+    }
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+}
+
+.highlightDescriptionSecond {
+  margin-bottom: 40px;
+  > p {
+    margin-top: 20px;
+    &:last-child {
+      margin-top: 10px;
+    }
+    &:not(:first-child) {
+      &::before {
+        content: "•";
+        margin-right: 15px;
+      }
+    }
   }
 }
 
@@ -38,7 +83,6 @@
     @apply w-full;
     @apply h-full;
     @apply object-cover;
-    @apply overflow-hidden;
 }
 
 .contentFeedbackWrapper {
@@ -62,9 +106,8 @@
 .cardFeedbackContainer {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
     padding: 40px 30px;
-    // min-height: 300px;
+    min-height: 438px;
 
     .contentCardFeedback {
         padding: 0;
@@ -76,12 +119,12 @@
          margin-top: 26px;
         }
         > p {
-            margin-top: 15px;
+            margin-top: 12px;
         }
     }
 
     @screen lg {
-      padding: 50px;
+      
     }
 }
 
@@ -111,7 +154,7 @@
           background-repeat: no-repeat;
           background-position: center;
           @apply text-white;
-          @apply bg-red-600;
+          @apply bg-yellow-500;
           opacity: 1;
           width: 40px;
           height: 40px;
@@ -136,7 +179,7 @@
           background-position: center;
           transform: rotate(180deg);
           @apply text-white;
-          @apply bg-red-600;
+          @apply bg-yellow-500;
           opacity: 1;
           width: 40px;
           height: 40px;
@@ -171,7 +214,7 @@
     }
   
     [class*="slick-active"] {
-      @apply bg-red-600;
+      @apply bg-yellow-500;
     }
   
     @screen lg {

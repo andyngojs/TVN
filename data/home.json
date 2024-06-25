@@ -1,68 +1,75 @@
 {
   "text_greeting": "SẮC VIỆT ENTERTAINMENT - Tổ chức sự kiện chuyên nghiệp và sáng tạo hàng đầu Việt Nam",
   "title_CTA": "Liên hệ ngay",
+  "bg_banner_highligh": "https://scontent.fhph3-1.fna.fbcdn.net/v/t39.30808-6/448832309_1466691570656177_4912477175063162029_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=3Mxm990YDv0Q7kNvgEitXjr&_nc_ht=scontent.fhph3-1.fna&oh=00_AYB9Zwo_ZAZdbTs65UPOVi_21xn7nOhePPiUqCf91EVqzw&oe=667F65BA",
   "description_highligh_1": [
-    "Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô phát triển",
-    "Tự hào là một trong những đơn vị cung cấp truss nhôm nhập khẩu hàng đầu Việt Nam, được rất nhiều Quý khách hàng ở nhiều tỉnh thành trên cả nước tin tưởng sử dụng sản phẩm, Công ty Cổ phần Thương mại Truss Việt Nam đã và đang ngày càng mở rộng quy mô phát triển"
+    "Sắc Việt Entertainment - Nâng tầm đẳng cấp sự kiện của bạn",
+    "Sắc Việt Entertainment - Đơn vị tổ chức sự kiện hàng đầu Miền Bắc với hơn 10 năm kinh nghiệm, mang đến sự kiện hoàn hảo cho mọi khách hàng. Đội ngũ nhân viên trẻ trung, năng động, sáng tạo, luôn cập nhật xu hướng mới nhất, cam kết dịch vụ hoàn hảo, thiết bị cao cấp, mức giá cạnh tranh. Sắc Việt Entertainment - Nâng tầm đẳng cấp sự kiện của bạn!"
   ],
   "title_see_more_btn": "Đọc thêm về chúng tôi",
   "card_feature_highligh": [
     {
-      "icon": "/images/badge.png",
-      "title": "Sản phẩm vượt trội",
-      "description": "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất."
+      "icon": "/icons/trophy.svg",
+      "title": "Kinh nghiệm dày dặn",
+      "description": "Hơn 10 năm tạo dựng uy tín, tổ chức thành công hàng trăm sự kiện lớn nhỏ, đa dạng ngành nghề"
     },
     {
-      "icon": "/images/badge.png",
-      "title": "HỢP ĐỒNG RÕ RÀNG",
-      "description": "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất."
+      "icon": "/icons/handshake.svg",
+      "title": "Đội ngũ chuyên nghiệp",
+      "description": "Đội ngũ nhân viên trẻ trung, năng động, được đào tạo bài bản, am hiểu chuyên môn, luôn nhiệt tình hỗ trợ khách hàng"
     },
     {
-      "icon": "/images/badge.png",
-      "title": "Sản phẩm vượt trội",
-      "description": "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ sư tay nghề cao, trên dây chuyền công nghệ hiện đại đảm bảo đa dạng về mẫu mã, đồng bộ về kết cấu, chi tiết tỉ mỉ trong từng mối hàn, vết cắt, khâu ráp nối đạt chất lượng ưu việt nhất."
+      "icon": "/icons/lightbulb.svg",
+      "title": "Ý tưởng sáng tạo",
+      "description": "Luôn cập nhật xu hướng mới nhất, mang đến những ý tưởng độc đáo, ấn tượng, tạo dấu ấn riêng cho mỗi sự kiện"
     },
     {
-      "icon": "/images/badge.png",
-      "title": "Sản phẩm vượt trội",
-      "description": "Những sản phẩm do TVN phân phối được nghiên cứu, sản xuất bởi các kỹ"
+      "icon": "/icons/circle-check.svg",
+      "title": "Chất lượng hàng đầu",
+      "description": "Cam kết dịch vụ hoàn hảo, thiết bị cao cấp, vận hành trơn tru, đảm bảo sự hài lòng cho khách hàng."
     }
   ],
   "description_service_highligh": [
-    "Hãy cùng khám phá những dịch vụ tổ chức Sự Kiện Chuyên Nghiệp tại Hải Dương, Công Ty Cổ Phần Thương Mại Và Dịch Vụ Giải Trí Sắc Việt",
-    [
-      "Tổ Chức Lễ Khai Trương",
-      "Tổ Chức Lễ Khai Trương",
-      "Tổ Chức Lễ Khai Trương",
-      "Tổ Chức Lễ Khai Trương"
-    ]
+    "Hãy cùng khám phá những dịch vụ tổ chức sự kiện chuyên nghiệp tại Hải Dương, Với hơn nhiều năm kinh nghiệm trong lĩnh vực tổ chức sự kiện, Sắc Việt Entertainment tự tin mang đến cho bạn những dịch vụ chuyên nghiệp, uy tín với đa dạng loại hình sự kiện",
+    "Tổ chức sự kiện doanh nghiệp",
+    "Tổ chức sự kiện giáo dục",
+    "Tổ chức sự kiện quảng cáo, marketing",
+    "Tổ chức sự kiện thể thao, giải trí",
+    "Tổ chức sự kiện kỷ niệm",
+    "Cho thuê thiết bị sự kiện"
   ],
   "projects_highligh": [
-    "https://drive.google.com/file/d/1ILqnyakfbuHzZgegDJMzy5TCjav7Rw-F/view?usp=sharing",
+    "https://drive.google.com/file/d/1OdWi8NXNqiHtmUQNWnI3afwMI9tf8h_G/view?usp=sharing",
     "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing",
-    "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing",
-    "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing",
-    "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing",
-    "https://drive.google.com/file/d/18YduFXhFTGFPszs_u3IKH2AWKMS3VBVv/view?usp=sharing"
+    "https://drive.google.com/file/d/18c-yqHNvEy1J1v0Q_q1UBau6HqwjhcDx/view?usp=sharing",
+    "https://drive.google.com/file/d/1EiwOHwbprsTJoZMY3v5g1qeSlb0Y5o9e/view?usp=sharing",
+    "https://drive.google.com/file/d/1cNLoGK-kHI8uk-GJxrHjwvfqP7y1lgPD/view?usp=sharing",
+    "https://drive.google.com/file/d/1KzfOskxGRJ3LXIw4xM2XtZnLoOc0xo8r/view?usp=sharing"
   ],
   "card_feedback_client": [
     {
       "icon": "/icons/quote.svg",
-      "image": "/images/avatar1.jpeg",
-      "title": "Khach hang 1",
-      "description": "Tôi rất hài lòng với dịch vụ của Sắc Việt Entertainment. Đội ngũ nhân viên rất chuyên nghiệp và tận tâm. Họ luôn lắng nghe và đáp ứng mọi yêu cầu của khách hàng. Cảm ơn Sắc Việt đã mang đến cho chúng tôi một sự kiện tuyệt vời!"
+      "image": "https://fullstack.edu.vn/static/media/fallback-avatar.155cdb2376c5d99ea151.jpg",
+      "title": "Công Ty Trường Thịnh",
+      "description": "Công ty chúng tôi đã hợp tác với Sắc Việt Entertainment để tổ chức sự kiện ra mắt sản phẩm mới và vô cùng hài lòng với dịch vụ của họ. Đội ngũ nhân viên chuyên nghiệp, nhiệt tình, luôn sẵn sàng hỗ trợ và giải đáp mọi thắc mắc của chúng tôi. Nhờ có Sắc Việt Entertainment, sự kiện của chúng tôi đã diễn ra suôn sẻ, ấn tượng và thu hút được đông đảo khách hàng tham dự. Chúng tôi highly recommend Sắc Việt Entertainment cho tất cả những ai đang tìm kiếm một đơn vị tổ chức sự kiện uy tín và chất lượng."
     },
     {
       "icon": "/icons/quote.svg",
-      "image": "/images/avatar1.jpeg",
-      "title": "Khach hang 2",
-      "description": "Chất lượng âm thanh và ánh sáng tại sự kiện do Sắc Việt Entertainment tổ chức thật xuất sắc. Mọi thứ được chuẩn bị kỹ lưỡng và chuyên nghiệp. Chắc chắn tôi sẽ tiếp tục sử dụng dịch vụ của các bạn trong những sự kiện sắp tới."
+      "image": "https://lh4.googleusercontent.com/proxy/_EPWkIsruIybsBCZKONNw11HBpo6YfZhcNU5K6BxdBHsWxx8KCMw8s_e5FHM322uQzix1bSe4OwLI0I2jCcRqe0w",
+      "title": "Công Ty Cổ Phần Dinh Dưỡng Việt Nam",
+      "description": "Công ty chúng tôi đã lựa chọn Sắc Việt Entertainment để tổ chức hội thảo chuyên ngành về dinh dưỡng và chúng tôi hoàn toàn hài lòng với quyết định này. Đội ngũ nhân viên của Sắc Việt Entertainment đã giúp chúng tôi lên kế hoạch chi tiết cho hội thảo, từ việc lựa chọn địa điểm, trang trí, đến việc chuẩn bị âm thanh, ánh sáng. Nhờ có Sắc Việt Entertainment, hội thảo của chúng tôi đã diễn ra suôn sẻ và ấn tượng, thu hút được đông đảo khách tham dự và tạo được hiệu quả tốt đẹp. Chúng tôi tin tưởng Sắc Việt Entertainment sẽ là đối tác tin cậy của công ty chúng tôi trong những sự kiện tiếp theo"
     },
     {
       "icon": "/icons/quote.svg",
-      "image": "/images/avatar1.jpeg",
-      "title": "Khach hang 3",
-      "description": "Sắc Việt Entertainment đã mang đến cho chúng tôi một chương trình vô cùng sáng tạo và độc đáo. Từ khâu ý tưởng cho đến khâu thực hiện, mọi thứ đều được chăm chút tỉ mỉ. Sự kiện diễn ra suôn sẻ và để lại ấn tượng sâu sắc cho tất cả khách mời."
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTD31YrCeX9u4sQOBFXl3e-vs3NniXSnxsIA&s",
+      "title": "Trung tâm thể thao TP Hải Dương",
+      "description": "Trung tâm thể thao TP Hải Dương đã hợp tác với Sắc Việt Entertainment trong nhiều năm để tổ chức các giải đấu thể thao lớn nhỏ khác nhau. Chúng tôi luôn đánh giá cao sự chuyên nghiệp, uy tín và chất lượng dịch vụ của Sắc Việt Entertainment. Đội ngũ nhân viên của họ luôn làm việc với tinh thần trách nhiệm cao, đảm bảo mọi việc diễn ra suôn sẻ và đúng tiến độ. Nhờ có Sắc Việt Entertainment, các giải đấu thể thao của chúng tôi luôn thành công và thu hút được sự quan tâm của đông đảo khán giả. Chúng tôi tin tưởng Sắc Việt Entertainment sẽ là đối tác đồng hành tin cậy của Trung tâm thể thao TP Hải Dương trong thời gian tới."
+    },
+    {
+      "icon": "/icons/quote.svg",
+      "image": "https://fullstack.edu.vn/static/media/fallback-avatar.155cdb2376c5d99ea151.jpg",
+      "title": "Bùi Thị Hải Yến",
+      "description": "Tôi đã sử dụng dịch vụ của Sắc Việt Entertainment để tổ chức sinh nhật cho con gái và vô cùng hài lòng với kết quả. Đội ngũ nhân viên sáng tạo, nhiệt tình, luôn lắng nghe mong muốn của tôi và biến những ý tưởng đó thành hiện thực. Nhờ có Sắc Việt Entertainment, sinh nhật của con gái tôi đã diễn ra vui vẻ, ấn tượng và để lại cho bé những kỷ niệm đẹp khó phai. Cảm ơn Sắc Việt Entertainment rất nhiều!"
     }
   ]
 }

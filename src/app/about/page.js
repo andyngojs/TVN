@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 import { dancing_script } from "../fonts";
@@ -8,79 +7,85 @@ import Layout from "@/components/Layout";
 import HeroBlock from "@/components/HeroBlock";
 import Card from "@/components/Card";
 import styles from "@/styles/pages/about.module.scss";
-
 import data from "../../../data/about.json";
 import { getDriveImageUrl } from "@/services/dataHandler";
+import { handleFbToMessengerLink } from "@/helpers/handleLinkInbox";
 
 const DATA_CONTACT = [
   {
+    icon: "/icons/phone.svg",
     methodName: "Hotline",
     detailMethod: `Liên hệ hotline ${config.hotline_formatted} để được tư vấn`,
     phone: config.hotline,
-    icon: "/icons/phone.svg",
     CTAName: "Gọi ngay",
   },
   {
+    icon: "/icons/facebook.svg",
     methodName: "Facebook",
     detailMethod: "Inbox Facebook chúng tôi ở Fanpage",
     link: config.facebookLink,
-    icon: "/icons/facebook.svg",
     CTAName: "Gửi tin nhắn",
   },
 ];
 
 export default function About() {
-  const imageIntro = getDriveImageUrl(data.image_intro);
-
   function renderCardContactMethod() {
-    return DATA_CONTACT.map((item, index) => (
-      <HighLightBlock.Item key={index} className={styles.cardWrapper}>
-        <Card>
-          <div className={styles.cardIconContainer}>
-            <img src={item.icon} />
-          </div>
+    return DATA_CONTACT.map((item, index) => {
+      return (
+        <HighLightBlock.Item key={index} className={styles.cardWrapper}>
+          <Card className={"py-[40px] px-[25px]"}>
+            <div className={styles.cardIconContainer}>
+              <img src={item.icon} />
+            </div>
 
-          <h5 className="mt-8 font-bold text-xl">{item.methodName}</h5>
-          <p className="text-center mt-5">{item.detailMethod}</p>
+            <h5 className="mt-8 font-bold text-xl">{item.methodName}</h5>
+            <p className="text-center mt-5">{item.detailMethod}</p>
 
-          {item.link && (
-            <Link target="_blank" href={item.link}>
-              {item.link}
-            </Link>
-          )}
+            {item.link && (
+              <Link target="_blank" href={item.link}>
+                {config.name}
+              </Link>
+            )}
 
-          {item.CTAName && (
-            <Link
-              href={item.phone ? `tel:${item.phone}` : item.link}
-              className={clsx("text-xl text-red-600 font-bold mt-8")}
-            >
-              {item.CTAName}
-            </Link>
-          )}
-        </Card>
-      </HighLightBlock.Item>
-    ));
+            {item.CTAName && (
+              <Link
+                target={item.link && "_blank"}
+                href={
+                  item.phone
+                    ? `tel:${item.phone}`
+                    : handleFbToMessengerLink(item.link)
+                }
+                className={clsx("text-xl text-yellow-600 font-bold mt-8")}
+              >
+                {item.CTAName}
+              </Link>
+            )}
+          </Card>
+        </HighLightBlock.Item>
+      );
+    });
   }
 
   return (
     <Layout>
       <HighLightBlock
-        imageBackgroundUrl={"/images/bg-page.png"}
+        contentClassName={clsx(
+          "!flex-col items-center",
+          styles.brandStoryContainer
+        )}
+        imgBackgroundUrl={"/images/bg-page.png"}
         imgBackgroundUrlPreview={"/images/bg-page.png"}
-        contentClassName={"!flex-col"}
       >
-        <div className={clsx("relative w-full pb-[50%] ")}>
-          <Image
+        <div className={clsx(styles.brandStoryImageContainer)}>
+          <img
+            loading="lazy"
             className="blur-up lazyloaded"
-            src={imageIntro}
-            fill
-            alt="bg-1"
+            src={data.image_intro}
           />
         </div>
 
         <div className={clsx("flexContainer", styles.brandStory_Heading)}>
-          <h3>Giới thiệu về</h3>
-          <h1>{config.fullNameCompany}</h1>
+          <h3>{`Giới thiệu về ${config.name}`} </h3>
         </div>
 
         <div className={clsx("relative w-full", styles.brandStory_Content)}>
@@ -107,11 +112,12 @@ export default function About() {
       </HighLightBlock>
 
       <HighLightBlock contentClassName={clsx(styles.coreValueWrapper)}>
-        <HighLightBlock.Item>
+        <HighLightBlock.Item className={clsx(styles.coreValueBlock)}>
           <HeroBlock
             imgBackgroundUrl={"/images/bg.png"}
             imgBackgroundUrlPreview={"/images/bg.png"}
             imgBackgroundClassName={"!blur-[2px]"}
+            contentClassName={styles.coreValueContainer}
           >
             <p
               className={clsx(
@@ -121,9 +127,7 @@ export default function About() {
             >
               Giá trị cốt lõi
             </p>
-            <h3 className={clsx("uppercase mt-4 text-center text-white")}>
-              {data.core_value}
-            </h3>
+            <h3 className={clsx("text-center")}>{data.core_value}</h3>
           </HeroBlock>
         </HighLightBlock.Item>
       </HighLightBlock>

@@ -22,11 +22,27 @@ export default function Contact() {
           className="lazyloaded blur-up"
         ></iframe>
       </div>
-      <HighLightBlock
-        containerClassName={"bg-white"}
-        contentClassName={styles.contentContainer}
-      >
-        <HighLightBlock.Item className={clsx(styles.formContainer, "w-full")}>
+
+      <HighLightBlock contentClassName={styles.contentContainer}>
+        <div className={styles.contactInfoContainer}>
+          <h3>Liên hệ</h3>
+
+          <p>SDT: {config.hotline_formatted}</p>
+          <p>Email: {config.email}</p>
+          <p>Địa chỉ: {config.address}</p>
+          <p>
+            Facebook:{" "}
+            <Link
+              className="link text-p"
+              target="_blank"
+              href={config.facebookLink}
+            >
+              {config.name}
+            </Link>
+          </p>
+        </div>
+
+        <HighLightBlock.Item className={clsx(styles.formContainer)}>
           <div className="flex flex-col lg:flex-row">
             <div className={clsx("flex-1", styles.inputContainer)}>
               <h6>Tên</h6>
@@ -49,24 +65,6 @@ export default function Contact() {
 
           <button className="btn">Gửi tin nhắn</button>
         </HighLightBlock.Item>
-
-        <div className={styles.contactInfoContainer}>
-          <h3>Liên hệ</h3>
-
-          <p>SDT: {config.hotline_formatted}</p>
-          <p>Email: {config.email}</p>
-          <p>Địa chỉ: {config.address}</p>
-          <p>
-            Facebook:{" "}
-            <Link
-              className="link text-p"
-              target="_blank"
-              href={config.facebookLink}
-            >
-              {config.facebookLink}
-            </Link>
-          </p>
-        </div>
       </HighLightBlock>
     </Layout>
   );

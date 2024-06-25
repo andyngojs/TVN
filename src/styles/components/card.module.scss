@@ -1,15 +1,16 @@
 .cardContainer {
-    display: flex;
+    @apply flex;
     @apply flex-col;
     @apply items-center;
     @apply justify-center;
-    @apply bg-white;
-    width: 100%;
-    padding: 40px 25px;
-    overflow: hidden;
+    @apply bg-neutral-950;
+    @apply w-full;
+    @apply px-card-x;
+    @apply py-card-y;
+    @apply overflow-hidden;
     border-radius: 20px;
 
     @screen lg {
-        width: auto;
+        @apply w-auto;
     }
 }

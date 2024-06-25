@@ -5,7 +5,7 @@ import styles from "@/styles/components/highLightBlock.module.scss";
 const LazyStaticImage = dynamic(() => import("./LazyStaticImage"));
 
 function HighLightBlock({
-  imageBackgroundUrl,
+  imgBackgroundUrl,
   imgBackgroundUrlPreview,
   imgBackgroundClassName,
   containerClassName,
@@ -14,10 +14,10 @@ function HighLightBlock({
 }) {
   return (
     <section className={clsx("relative", containerClassName)}>
-      {!!imageBackgroundUrl && (
+      {!!imgBackgroundUrl && (
         <div className={clsx(styles.imageBackground)}>
           <LazyStaticImage
-            src={imageBackgroundUrl}
+            src={imgBackgroundUrl}
             previewSrc={imgBackgroundUrlPreview}
             className={imgBackgroundClassName}
           />

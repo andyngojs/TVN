@@ -71,11 +71,11 @@ export default function Header() {
     const pathName = usePathname();
 
     return NAV_DATA.map((item, index) => {
-      const extraClassName = pathName == item.link ? 'text-red-500' : '';
+      const extraClassName = pathName == item.link ? 'text-yellow-500' : '';
 
       return (
         <Link
-          className={'text-neutral-950 hover:text-red-500'}
+          className={'text-white hover:text-yellow-500'}
           key={index}
           href={item.link}>
           <h6
@@ -96,13 +96,13 @@ export default function Header() {
       <header className="w-full shadow-md fixed z-50">
         <div
           className={clsx(
-            `bg-neutral-800 px-[15px] py-3 flex items-center justify-center gap-x-3`,
+            `bg-neutral-950 px-[15px] py-3 flex items-center justify-center gap-x-3`,
           )}
           style={{height: HEADER_INFO_HEIGHT}}>
           {renderHeaderData()}
         </div>
 
-        <div className={'bg-white'} style={{height: HEADER_MAIN_HEIGHT}}>
+        <div className={'bg-black'} style={{height: HEADER_MAIN_HEIGHT}}>
           <div
             className={clsx(
               'max-w-app-width flex flex-1 items-center justify-between',
@@ -112,11 +112,12 @@ export default function Header() {
               className={clsx(
                 'flex justify-between items-center w-full px-[15px] py-1 lg:w-auto lg:py-2.5',
               )}>
-              <Link href={'/'}>
+              <Link className={clsx('w-[130px] h-full')} href={'/'}>
                 <img
                   src={config.logo}
-                  alt="logo-tvn"
-                  className={clsx('w-[130px] h-auto')}
+                  alt="logo-sv-ent"
+                  width={'100%'}
+                  height={'100%'}
                 />
               </Link>
 
@@ -139,7 +140,7 @@ export default function Header() {
         </div>
       </header>
       {isShowNavMobile && (
-        <div className="absolute w-full h-full bg-white lg:hidden" />
+        <div className={clsx(styles.backdropMobileNav ,"absolute w-full h-full bg-black lg:hidden")} />
       )}
     </>
   );
